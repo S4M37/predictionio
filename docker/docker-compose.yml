@@ -17,6 +17,7 @@ version: "3"
 services:
   pio:
     image: predictionio/pio:latest
+    container_name: pio
     ports:
       - 7070:7070
       - 8000:8000

@@ -17,10 +17,21 @@ version: "3"
 services:
   postgres:
     image: postgres:9
+    container_name: pgsql
     environment:
       POSTGRES_USER: pio
       POSTGRES_PASSWORD: pio
       POSTGRES_INITDB_ARGS: --encoding=UTF8
+
+  pgadmin:
+    image: dpage/pgadmin4
+    container_name: pgadmin
+    ports:
+      - 8080:80
+    environment:
+      - PGADMIN_DEFAULT_EMAIL=pio
+      - PGADMIN_DEFAULT_PASSWORD=pio
+
   pio:
     depends_on:
       - postgres
