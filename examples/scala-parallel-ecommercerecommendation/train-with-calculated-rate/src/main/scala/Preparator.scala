@@ -12,6 +12,7 @@ class Preparator
     new PreparedData(
       users = trainingData.users,
       items = trainingData.items,
+      rateEvents = trainingData.rateEvents, // MODIFIED
       viewEvents = trainingData.viewEvents,
       clickEvents = trainingData.clickEvents,
       buyEvents = trainingData.buyEvents)
